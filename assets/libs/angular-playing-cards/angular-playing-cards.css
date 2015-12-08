@@ -1,0 +1,262 @@
+.playing-card {
+  background-color: #fff;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  border-radius: 0.8em;
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  float: left;
+  width: 100%;
+  height: 100%;
+  /*margin: 0 1.2em 1.2em 0;*/
+  position: relative;
+  z-index: 2;
+}
+.playing-card.noshadow {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.playing-card .flipped {
+  -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.playing-card.heart,
+.playing-card.diamond {
+  color: #df0000;
+}
+.playing-card .corner {
+  line-height: 1;
+  position: absolute;
+  text-align: center;
+}
+.playing-card .corner span {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.playing-card .corner .number {
+  font-size: 1.6em;
+  height: 1em;
+  line-height: 1.32em;
+}
+.playing-card .corner.top {
+  left: 5%;
+  top: 2%;
+}
+.playing-card .corner.bottom {
+  bottom: 2%;
+  right: 5%;
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.playing-card .card-ace span.suit.middle_center {
+  font-size: 10.24em;
+  left: 0.45517241379310347em;
+  top: 0.593103448275862em;
+}
+.playing-card .card-ten .corner .number {
+  font-size: 1.5em;
+}
+.playing-card .face {
+  position: absolute;
+  left: 17%;
+  top: 12%;
+  width: 67%;
+  height: 76%;
+}
+
+.card-back .face {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/back.png');
+  background-size: cover;
+}
+
+.card-little-joker .face {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/little-joker.png');
+  background-size: 16em 22.4em;
+}
+
+.card-big-joker .face {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/big-joker.png');
+  background-size: 16em 22.4em;
+}
+
+.card-jack .face,
+.card-queen .face,
+.card-king .face {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.card-jack.diamond .face {
+  background-image: url('img/face-jack-diamond.png');
+}
+
+.card-jack.diamond .face {
+  background-image: url('img/face-jack-diamond.png');
+}
+
+.card-jack.diamond .face {
+  background-image: url('img/face-jack-diamond.png');
+}
+.card-jack.heart .face {
+  background-image: url('img/face-jack-heart.png');
+}
+.card-jack.spade .face {
+  background-image: url('img/face-jack-spade.png');
+}
+.card-jack.club .face {
+  background-image: url('img/face-jack-club.png');
+}
+
+.card-queen.diamond .face {
+  background-image: url('img/face-queen-diamond.png');
+}
+.card-queen.heart .face {
+  background-image: url('img/face-queen-heart.png');
+}
+.card-queen.spade .face {
+  background-image: url('img/face-queen-spade.png');
+}
+.card-queen.club .face {
+  background-image: url('img/face-queen-club.png');
+}
+
+.card-king.diamond .face {
+  background-image: url('img/face-king-diamond.png');
+}
+.card-king.heart .face {
+  background-image: url('img/face-king-heart.png');
+}
+.card-king.spade .face {
+  background-image: url('img/face-king-spade.png');
+}
+.card-king.club .face {
+  background-image: url('img/face-king-club.png');
+}
+
+.playing-card .suit {
+  font-size: 2.8em;
+  font-weight: normal;
+  width: 0.6896551724137931em;
+  height: 0.786206896551724em;
+  line-height: 0.786206896551724em;
+  position: absolute;
+  text-align: center;
+  margin: -0.4em -0.27em;
+}
+.playing-card .suit.top_center {
+  left: 50%;
+  top: 15%;
+}
+.playing-card .suit.top_left {
+  left: 27%;
+  top: 15%;
+}
+.playing-card .suit.top_right {
+  right: 27%;
+  top: 15%;
+}
+.playing-card .suit.middle_center {
+  left: 50%;
+  top: 50%;
+}
+.playing-card .suit.middle_top {
+  left: 50%;
+  top: 25%;
+}
+.playing-card .suit.middle_bottom {
+  bottom: 25%;
+  left: 50%;
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.playing-card .suit.middle_left {
+  left: 27%;
+  top: 50%;
+}
+.playing-card .suit.middle_right {
+  right: 27%;
+  top: 50%;
+}
+.playing-card .suit.middle_top_center {
+  left: 1.0482758620689656em;
+  top: 0.8275862068965517em;
+}
+.playing-card .suit.middle_top_left {
+  left: 27%;
+  top: 36%;
+}
+.playing-card .suit.middle_top_right {
+  right: 27%;
+  top: 36%;
+}
+.playing-card .suit.middle_bottom_left {
+  bottom: 36%;
+  left: 27%;
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.playing-card .suit.middle_bottom_right {
+  bottom: 36%;
+  right: 27%;
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.playing-card .suit.middle_bottom_center {
+  bottom: 0.8275862068965517em;
+  left: 1.0482758620689656em;
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.playing-card .suit.bottom_center {
+  bottom: 15%;
+  left: 50%;
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.playing-card .suit.bottom_left {
+  bottom: 15%;
+  left: 27%;
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.playing-card .suit.bottom_right {
+  bottom: 15%;
+  right: 27%;
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

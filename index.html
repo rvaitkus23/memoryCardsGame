@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html data-ng-app="playCards">
+<head>
+  <meta charset="UTF-8">
+  <title>Cards game</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <!--libs-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css"/>
+  <link rel="stylesheet" href="assets/libs/angular-playing-cards/angular-playing-cards.css">
+  <link rel="stylesheet" href="assets/libs/angualr-slider/rzslider.min.css">
+
+  <!-- injector:css -->
+  <link rel="stylesheet" href="build/app.min.css">
+  <!-- endinjector -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+</head>
+<body>
+<div class="container" ng-controller="gameController as vm">
+  <div class="top-game-info">
+    <div class="card">
+      Choose pairs count
+      <div class="slider-container">
+        <rzslider
+            rz-slider-model="vm.slider.value"
+            rz-slider-options="vm.slider.options"></rzslider>
+      </div>
+      Moves: {{vm.moves}}; Pairs: {{vm.pairsOpend}}/{{vm.slider.value}}; Time: {{vm.timeSpent | date:"mm:ss"}}
+      <a class="waves-effect waves-light btn" ng-click="vm.resetGame()">Restart game</a>
+    </div>
+  </div>
+  <div ng-repeat="card in vm.cardsOutput track by card.id" class="card-holder">
+    <flipping-play-card ng-click="vm.cardClicked($index)" rank="{{card.rank}}" suit="{{card.suit}}" flipped="card.flipped"/>
+  </div>
+
+</div>
+<!--libs-->
+
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="assets/libs/angular-playing-cards/angular-playing-cards.js"></script>
+<script src="assets/libs/angualr-slider/rzslider.min.js"></script>
+
+<!-- injector:js -->
+<script src="build/app.min.js"></script>
+<!-- endinjector -->
+</body>
+</html>
