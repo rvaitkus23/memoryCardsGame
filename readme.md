@@ -51,5 +51,6 @@ grunt build:release
 
 * Work on styling, layout and other styling stuff
 * Store and display completed games statistic and order it placing best results on top (best result - to be defined)
-* review naming conventions 
+* Review naming conventions 
+* Better user promt then game is completed 
 
